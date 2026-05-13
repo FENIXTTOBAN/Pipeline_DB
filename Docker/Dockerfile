@@ -9,7 +9,7 @@ WORKDIR $APP_HOME
 EXPOSE 8084
 
 #Copiar el archivo JAR generado por Maven al contenedor
-COPY target/ecommerce-app-*.jar app.jar
+COPY target/ecommerce-*.jar app.jar
 
 #Nunca usuario no-root no entrara para seguridad
 RUN useradd -m appuser && chown -R appuser:appuser $APP_HOME
